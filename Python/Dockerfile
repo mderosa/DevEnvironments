@@ -3,7 +3,10 @@ FROM ubuntu:23.04
 RUN apt update
 RUN apt upgrade -y
 RUN apt install -y build-essential curl git sudo ack zlib1g-dev libssl-dev libncurses-dev libbz2-dev libffi-dev \
-    libreadline-dev libsqlite3-dev liblzma-dev
+    libreadline-dev libsqlite3-dev liblzma-dev locales
+
+RUN locale-gen en_US.UTF-8
+RUN update-locale LANG=en_US.UTF-8
 
 WORKDIR /root
 RUN mkdir workspace
