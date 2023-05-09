@@ -5,6 +5,8 @@ RUN apt upgrade -y
 RUN apt install -y build-essential curl git sudo ack zlib1g-dev libssl-dev libncurses-dev libbz2-dev libffi-dev \
     libreadline-dev libsqlite3-dev liblzma-dev locales
 
+RUN apt install -y libpq-dev
+
 RUN locale-gen en_US.UTF-8
 RUN update-locale LANG=en_US.UTF-8
 
