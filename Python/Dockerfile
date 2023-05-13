@@ -3,7 +3,7 @@ FROM ubuntu:23.04
 RUN apt update
 RUN apt upgrade -y
 RUN apt install -y build-essential curl git sudo ack zlib1g-dev libssl-dev libncurses-dev libbz2-dev libffi-dev \
-    libreadline-dev libsqlite3-dev liblzma-dev locales
+    libreadline-dev libsqlite3-dev liblzma-dev locales tzdata
 
 RUN apt install -y libpq-dev
 
